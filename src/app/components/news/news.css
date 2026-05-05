@@ -1,0 +1,164 @@
+.news-page {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+/* HEADER */
+.news-header {
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(#d44a3a 0%, #b03024 55%, #8e241c 100%);
+    box-shadow: inset 0 0 0 2px #f1d38a,
+        inset 0 0 0 4px #a8792c,
+        0 0 0 6px #0b2a36,
+        0 6px 14px #0009;
+    border-radius: 14px;
+    padding: 8px 34px;
+    width: 50%;
+    margin: 0 auto 50px;
+}
+
+
+.news-header p {
+    opacity: 0.75;
+}
+
+/* CARD */
+.card.highlights {
+    background: #071821;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e5b567;
+    margin-bottom: 2rem;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.news {
+    scroll-behavior: smooth;
+}
+
+
+/* ARTICLE */
+.news-article h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #f1d38a;
+}
+
+.news-article p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e6e6e6;
+    margin-bottom: 1rem;
+}
+
+/* TIME */
+.news-time {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    display: block;
+}
+
+/* add articale */
+.news-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #e5b567;
+    background: #0b2a36;
+    color: #fff;
+}
+
+.news-form button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    background: #d44a3a;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.news-actions button {
+    margin-right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.news-actions button:first-child {
+    background: #1e88e5;
+    color: #fff;
+}
+
+.news-actions button:last-child {
+    background: #d93627;
+    color: #fff;
+}
+
+.news-form textarea,
+.news-article form textarea {
+    width: 100%;
+    min-height: 150px;
+    /* bigger content box */
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #e5b567;
+    background: #0b2a36;
+    color: #fff;
+    resize: vertical;
+    /* user can drag to resize vertically */
+}
+
+.news-article textarea {
+    min-height: 180px;
+    /* make edit box larger than create box if you like */
+}
+
+/* UPDATE button */
+.news-update-btn {
+    background: #2e7d32;
+    /* green */
+    color: #fff;
+    padding: 0.45rem 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+
+/* CANCEL button */
+.news-cancel-btn {
+    background: #ca0404;
+    /* gray */
+    color: #fff;
+    padding: 0.45rem 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+@media (max-width: 600px) {
+    .news-header {
+        width: 100%;
+    }
+}

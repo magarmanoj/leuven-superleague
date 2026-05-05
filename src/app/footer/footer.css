@@ -1,0 +1,131 @@
+.footer {
+    background: linear-gradient(135deg, #071821, #0c2432);
+    border-top: 3px solid #e5b567;
+    padding: 50px 6% 20px;
+    color: #e5e7eb;
+}
+
+/* GRID LAYOUT */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+/* COLUMN */
+.footer-column h4 {
+    color: #e5b567;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-column a {
+    display: block;
+    text-decoration: none;
+    color: #cbd5e1;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #e5b567;
+    transform: translateX(4px);
+}
+
+/* SOCIAL */
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+/* ===== BOTTOM BAR ===== */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo Section */
+.footerLogo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footerLogo img {
+    height: auto;
+}
+
+.footer-small {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Sponsor Section */
+.footer-sponsor {
+    display: flex;
+    align-items: center;
+}
+
+.sponsor-text {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e5b567;
+}
+
+.footer-sponsor img {
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+.footer-sponsor img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .footer-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns instead of 4 */
+        gap: 28px;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-column h4 {
+        font-size: 15px;
+    }
+
+    .footer-column a,
+    .footer-column button {
+        font-size: 13px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+}

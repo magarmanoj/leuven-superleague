@@ -1,0 +1,329 @@
+/* ================= HERO ================= */
+.homePage {
+    padding: 50px 24px;
+    font-weight: bold;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(135deg, #071821 0%, #0c2432 100%);
+    padding: 22px;
+    position: relative;
+    border-bottom: 3px solid #e5b567;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+
+}
+
+/* Wrap */
+.hero .wrap {
+    max-width: 1200px;
+}
+
+/* Heading */
+.hero h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+}
+
+/* Subtext */
+.hero p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+/* ===== BUTTON AREA ===== */
+.hero-actions {
+    display: flex;
+    gap: 18px;
+}
+
+.hero-actions button {
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+/* PRIMARY BUTTON */
+.weekend {
+    background: #e5b567;
+    color: #071821;
+    box-shadow: 0 6px 20px rgba(229, 181, 103, 0.35);
+}
+
+.weekend:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(229, 181, 103, 0.5);
+}
+
+/* SECONDARY BUTTON */
+.leagueTable {
+    background: transparent;
+    color: #e5b567;
+    border: 2px solid #e5b567;
+}
+
+.leagueTable:hover {
+    background: #e5b567;
+    color: #071821;
+    transform: translateY(-2px);
+}
+
+
+/* ================= CARD STYLE ================= */
+.card {
+    background: linear-gradient(135deg, #0c2432, #071821);
+    border-radius: 18px;
+    border: 2px solid #e5b567;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .6);
+    color: #e5e7eb;
+    margin-bottom: 2rem;
+
+}
+
+/* ================= MATCH ================= */
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.score {
+    font-size: 22px;
+    font-weight: 700;
+    color: #e5b567;
+}
+
+.meta {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 16px;
+}
+
+/* ================= TIMELINE ================= */
+.timeline {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline li {
+    padding: 6px 0;
+    border-left: 2px solid #e5b567;
+    padding-left: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* ===== FIXTURE ROW ===== */
+.fixture-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap;
+}
+
+/* ===== TEAM BLOCK ===== */
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+/* Logo styling */
+.team-logo {
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #e5b567;
+    background: #0b2a36;
+}
+
+/* Team name styling */
+.team span {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* VS in the middle */
+.vs {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #f1d38a;
+    margin: 0 1rem;
+}
+
+/* Kickoff time below */
+.time {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #f1d38a;
+}
+
+
+
+/* ================= TABLE ================= */
+.table-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-card th {
+    text-align: left;
+    padding: 10px;
+    font-size: 13px;
+    color: #94a3b8;
+    border-bottom: 1px solid #1e293b;
+}
+
+.table-card td {
+    padding: 10px;
+    border-bottom: 1px solid #1e293b;
+    font-size: 14px;
+}
+
+.table-card tbody tr:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.leader {
+    background: rgba(229, 181, 103, 0.08);
+    font-weight: 600;
+}
+
+/* ================= SPOTLIGHT ================= */
+.spotlight {
+    margin-top: 60px;
+}
+
+.spotlight-card {
+    background: linear-gradient(135deg, #062a30, #0b3c45);
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid #e5b567;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .6);
+}
+
+.badge {
+    display: inline-block;
+    background: #e5b567;
+    color: #062a30;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* ================= TEAMS ================= */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.team-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 14px;
+    border: 1px solid #e5b567;
+    border-style: outset;
+    border-bottom: 4px solid #e5b567;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.08),
+        0 8px 20px rgba(0, 0, 0, 0.12);
+    gap: 1em;
+    background: linear-gradient(135deg, #062a30, #0b3c45);
+}
+
+/* ================= NEWS SECTION ================= */
+
+.highlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.news-grid {
+    scroll-behavior: smooth;
+}
+
+
+/* Headline */
+.news-grid h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #f1d38a;
+}
+
+/* Body text */
+.news-grid p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e6e6e6;
+    margin-bottom: 1rem;
+}
+
+.news-image {
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+/* Timestamp */
+.news-time {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    display: block;
+}
+
+.event-days {
+    font-weight: bold;
+    color: #f1d38a;
+    font-size: 1rem;
+    opacity: 0.6;
+    display: block;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (min-width: 900px) {
+    .main-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .main-grid .card:nth-child(1) {
+        grid-column: span 2;
+    }
+}

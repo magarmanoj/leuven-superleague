@@ -1,0 +1,509 @@
+.match-table {
+    padding: 85px 24px;
+    font-weight: bold;
+}
+
+/* MAIN TABLE */
+.matchtable {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #e5b567;
+    border-style: outset;
+    border-bottom: 6px solid #e5b567;
+}
+
+/* MATCH ROW */
+.match-row {
+    display: grid;
+    grid-template-columns: 1fr 140px 1fr auto;
+    align-items: center;
+    padding: 14px 16px;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* TEAMS */
+.match-team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.match-team.home {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.match-team.away {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* SCORE / TIME */
+.modal-score {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* kickoff time when not played */
+.kickoff-time {
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+/* GOAL SUMMARY (RIGHT SIDE) */
+.goal-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #d1d5db;
+    text-align: right;
+}
+
+.goal-line {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.goal-line.home {
+    opacity: 0.9;
+}
+
+.goal-line.away {
+    opacity: 0.9;
+}
+
+.minute {
+    font-weight: 700;
+}
+
+.scorer {
+    white-space: nowrap;
+}
+
+/* ACTIONS */
+.match-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: center;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* BUTTONS */
+.edit-btn {
+    background-color: #1e293b;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.edit-btn:hover {
+    background-color: #334155;
+}
+
+.edit-btn:active {
+    transform: scale(0.96);
+}
+
+.edit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.save-btn {
+    background-color: #16a34a;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #dc2626;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* MODAL BACKDROP */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* MODAL */
+.modal {
+    background: radial-gradient(circle at top center, #1f3b4d 0%, #132c3a 35%, #0b1f2b 65%, #081722 100%);
+    border-radius: 14px;
+    padding: 26px;
+    width: 900px;
+    max-width: 95vw;
+    color: #fff;
+
+    box-shadow:
+        inset 0 0 0 2px #f1d38a,
+        inset 0 0 0 4px #a8792c,
+        0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin-bottom: 6px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffe7b0;
+}
+
+
+/* TWO-COLUMN GOALS */
+.goal-columns {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.08);
+    margin-bottom: 18px;
+}
+
+
+/* TEAM GOALS */
+.team-goals-list {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.team-goals-list.home {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.team-goals-list.away {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.team-goal-line {
+    display: flex;
+    gap: 6px;
+}
+
+.team-goal-line .minute {
+    font-weight: 700;
+    color: #f1d38a;
+}
+
+.team-goal-line .scorer {
+    white-space: nowrap;
+}
+
+
+
+/* GOAL ROW */
+.goal-row {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.goal-row input {
+    color: #fff;
+    border: 1px solid #e5b567;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.goal-row select {
+    appearance: none;
+    border: 1px solid #e5b567;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.goal-row option {
+    color: #000000;
+}
+
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.save-btn {
+    background: #16a34a;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.cancel-btn {
+    background: #dc2626;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+/* ADD GOAL */
+.add-goal-btn {
+    margin-top: 10px;
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #e5b567;
+    border-radius: 6px;
+    cursor: pointer;
+    align-items: flex-start;
+    background: linear-gradient(180deg,
+            #87d43a 0%,
+            #24b030 55%,
+            #1c8e24 100%);
+}
+
+.add-goal-btn:hover {
+    background: #eaeaea;
+}
+
+/* MODAL ACTIONS */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.matchweek-select {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    background: linear-gradient(180deg,
+            #d44a3a 0%,
+            #b03024 55%,
+            #8e241c 100%);
+
+    padding: 8px 28px;
+    border-radius: 14px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+
+    box-shadow:
+        inset 0 0 0 2px #f1d38a,
+        inset 0 0 0 4px #a8792c,
+        0 0 0 6px #0b2a36,
+        0 6px 14px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+}
+
+.matchweek-select option {
+    background-color: #0b2a36;
+}
+
+
+.matchweek-select:hover {
+    transform: translateY(-1px);
+}
+
+.match-meta {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 18px;
+}
+
+.match-meta label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 14px;
+    gap: 6px;
+}
+
+.match-meta input,
+.match-meta select {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #e5b567;
+    border-radius: 6px;
+    padding: 6px 10px;
+}
+
+/* ===== RESPONSIVE: TABLETS ===== */
+@media (max-width: 900px) {
+    .match-row {
+        grid-template-columns: 1fr 100px 1fr auto;
+        padding: 12px 14px;
+        gap: 6px;
+    }
+
+    .match-team.home,
+    .match-team.away {
+        gap: 6px;
+    }
+
+    .modal {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .team-goals-list.home,
+    .team-goals-list.away {
+        font-size: 11px;
+    }
+
+    .modal-score {
+        font-size: 16px;
+    }
+
+    .goal-row input,
+    .goal-row select {
+        padding: 4px 6px;
+        font-size: 0.85rem;
+    }
+
+    .matchweek-select {
+        padding: 6px 20px;
+        font-size: 14px;
+    }
+
+    .match-meta input,
+    .match-meta select {
+        padding: 4px 6px;
+        font-size: 13px;
+    }
+}
+
+/* ===== RESPONSIVE: MOBILE ===== */
+@media (max-width: 600px) {
+
+    .match-table {
+        padding: 55px 24px;
+    }
+
+    .match-row {
+        display: block;
+        padding: 10px 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .match-team.home,
+    .match-team.away {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .modal-score {
+        text-align: center;
+        font-size: 14px;
+        margin: 6px 0;
+    }
+
+    .kickoff-time {
+        font-size: 13px;
+        text-align: center;
+        margin-top: 4px;
+    }
+
+    .team-goals-list.home,
+    .team-goals-list.away {
+        align-items: flex-start;
+        text-align: left;
+        font-size: 11px;
+    }
+
+    .goal-row {
+        display: block;
+        gap: 4px;
+    }
+
+    .goal-row input,
+    .goal-row select {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 4px 6px;
+    }
+
+    .modal {
+        width: 95%;
+        padding: 16px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .save-btn,
+    .cancel-btn,
+    .add-goal-btn {
+        width: 30%;
+        padding: 6px 0;
+        font-size: 0.85rem;
+    }
+
+    .matchweek-select {
+        width: 80%;
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+
+    .match-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .match-meta input,
+    .match-meta select {
+        width: 100%;
+    }
+}

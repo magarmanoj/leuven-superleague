@@ -1,0 +1,281 @@
+/* ====== ROOT WRAPPER ====== */
+.league-table {
+    padding: 85px 24px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ====== TABLE WRAPPER ====== */
+.table-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.table-scroll {
+    overflow-x: auto;
+    width: 100%;
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: #c1c1c1 rgba(0, 0, 0, 0.1);
+    /* track + thumb color */
+}
+
+.table-border {
+    border: 2px solid #e5b567;
+    border-radius: 14px;
+    border-style: outset;
+    border-bottom: 6px solid #e5b567;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: transparent;
+}
+
+/* ====== TITLE CUT INTO BORDER ====== */
+.table-title-badge {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg,
+            #d44a3a 0%,
+            #b03024 55%,
+            #8e241c 100%);
+    padding: 8px 34px;
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    z-index: 5;
+
+    box-shadow:
+        inset 0 0 0 2px #f1d38a,
+        inset 0 0 0 4px #a8792c,
+        0 0 0 6px #0b2a36,
+        0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* ====== HEADER ====== */
+.table-head {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.table-header-row th {
+    padding: 14px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+/* ====== POSITION ====== */
+.table-pos {
+    padding: 16px 12px;
+}
+
+.pos-number {
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+}
+
+/* ====== TEAM CELL ====== */
+.table-team {
+    padding: 14px 12px;
+}
+
+.team-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.teamlogo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.team-name {
+    font-size: 15px;
+    font-weight: 600;
+    white-space: normal;
+    /* allow wrapping */
+    overflow-wrap: anywhere;
+    /* break long names safely */
+    line-height: 1.2;
+}
+
+/* ====== STATS ====== */
+.table-stat {
+    padding: 14px 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.goal-diff {
+    font-weight: 600;
+}
+
+/* ====== POINTS ====== */
+.table-points {
+    padding: 14px 12px;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ====== FORM ====== */
+.table-form {
+    padding: 12px;
+}
+
+.form-icons {
+    display: flex;
+    gap: 6px;
+}
+
+.form-badge {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Win */
+.form-w {
+    background-color: #1f8f4a;
+}
+
+/* Draw */
+.form-d {
+    background-color: #9b9b9b;
+}
+
+/* Loss */
+.form-l {
+    background-color: #c0392b;
+}
+
+/* ====== NEXT OPPONENT ====== */
+.table-next {
+    padding: 12px;
+    text-align: center;
+}
+
+.next-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* ====== LOADING ====== */
+.table-loading {
+    color: white;
+    padding: 40px;
+    font-size: 18px;
+}
+
+/* ====== ROW DIVIDERS ====== */
+.table-body .table-row:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ====== SPECIAL POSITIONS (OPTIONAL) ====== */
+/* Top 4 */
+.table-body .table-row:nth-child(-n+4) .pos-number {
+    color: #4da3ff;
+}
+
+/* Relegation zone */
+.table-body .table-row:nth-last-child(-n+3) .pos-number {
+    color: #ff4d4d;
+}
+
+/* ====== MOBILE: ≤600px ===== */
+@media (max-width: 600px) {
+
+    .league-table {
+        padding: 5rem 0.5rem 0 0.5rem;
+    }
+
+    .table-wrapper {
+        padding-top: 3rem;
+    }
+
+    .table-title-badge {
+        width: 60%;
+    }
+
+    .teamlogo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .team-name {
+        font-size: 14px;
+        max-width: 90px;
+    }
+
+    .table-stat,
+    .table-points,
+    .table-pos {
+        font-size: 13px;
+        padding: 6px 4px;
+    }
+
+    .table-header-row th:nth-child(1),
+    .table-body td:nth-child(1) {
+        width: 50px;
+        min-width: 50px;
+        max-width: 50px;
+
+        position: sticky;
+        left: 0;
+        z-index: 4;
+        background: #0b2a36;
+    }
+
+    .table-header-row th:nth-child(2),
+    .table-body td:nth-child(2) {
+        position: sticky;
+        left: 50px;
+        z-index: 4;
+        background: #0b2a36;
+    }
+
+    .col-team,
+    .table-header-row th:nth-child(2),
+    .table-body td:nth-child(2) {
+        white-space: nowrap;
+        width: max-content;
+        min-width: max-content;
+    }
+
+    .table-head {
+        background: none;
+    }
+
+    .table {
+        width: max-content;
+    }
+}
