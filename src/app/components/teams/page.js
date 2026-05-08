@@ -3,7 +3,10 @@
 import { useContext, useState } from "react";
 import "./teams.css";
 import { TeamsContext } from "../../Context/teamsContext";
+import { TablesContext } from "../../Context/tableContext";
+
 import Image from "next/image";
+import TablePage from "../table/page";
 
 export default function TeamsPage() {
     const {
@@ -18,6 +21,7 @@ export default function TeamsPage() {
         isAdmin,
         loading
     } = useContext(TeamsContext);
+
 
     const [newName, setNewName] = useState("");
     const [newRole, setNewRole] = useState("");
@@ -205,14 +209,15 @@ export default function TeamsPage() {
                                     </button>
                                 </div>
                             )}
-
                             <button className="close-btn" onClick={closeTeam}>
                                 Close
                             </button>
+
                         </div>
                     </div>
                 )}
             </div>
+
         </div>
     );
 }

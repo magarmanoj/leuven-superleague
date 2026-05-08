@@ -15,6 +15,7 @@ export default function TablePage() {
 
     if (loading) return <div className="table-loading">Loading table...</div>;
 
+    console.log("teting", sortedTable);
     return (
         <div className="league-table">
             <div className="table-wrapper">
